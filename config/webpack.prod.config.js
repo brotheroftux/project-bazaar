@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 const util = require('./util')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin

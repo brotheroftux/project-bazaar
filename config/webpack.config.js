@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 const merge = require('webpack-merge')
 const devConfiguration = require('./webpack.dev.config')
 const prodConfiguration = require('./webpack.prod.config')
@@ -13,7 +12,6 @@ function resolve (dir) {
 const baseConfiguration = {
     entry: {
         app: '../src/main.js'
-        // vendor: ['vue', 'vuex']
     },
     output: {
         filename: '[name].js',
@@ -33,6 +31,7 @@ const baseConfiguration = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 include: [resolve('src')],
+                exclude: /node_modules/
             },
 
             {
@@ -55,6 +54,15 @@ const baseConfiguration = {
             chunks: ['vendor', 'app']
         })
     ]
+}
+
+if (! process.argv.includes('--env.nolint')) {
+    baseConfiguration.module.rules.push({
+        enforce: 'pre',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+    })
 }
 
 module.exports = merge(baseConfiguration, (process.argv.includes('--env.prod')
