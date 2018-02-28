@@ -11,9 +11,6 @@ export default {
 </script>
 
 <style lang='scss'>
-    @import '~@/global-styles/vars.sass'
-
-    
-</style>
+    @import '~@/global-styles/vars.sass';
 
 </style>

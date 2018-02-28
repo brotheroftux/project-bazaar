@@ -5,6 +5,6 @@ module.exports =  {
     loaders: util.cssLoaders({
         minimize: isProduction,
         sourceMap: isProduction,
-        extract: true
+        extract: isProduction
     })
 }
