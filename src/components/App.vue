@@ -10,7 +10,9 @@ export default {
 }
 </script>
 
-<style lang='sass'>
+<style lang='scss'>
     @import '~@/global-styles/vars.sass'
+
+    
 </style>
 
