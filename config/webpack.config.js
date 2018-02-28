@@ -4,6 +4,7 @@ const devConfiguration = require('./webpack.dev.config')
 const prodConfiguration = require('./webpack.prod.config')
 const vueLoaderConfiguration = require('./vue-loader.config')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Stylish = require('webpack-stylish')
 
 function resolve (dir) {
     return path.join(__dirname, '..', dir)
@@ -52,8 +53,11 @@ const baseConfiguration = {
             inject: 'body',
             template: '../index.html',
             chunks: ['vendor', 'app']
-        })
-    ]
+        }),
+        new Stylish()
+    ],
+
+    stats: 'none'
 }
 
 if (! process.argv.includes('--env.nolint')) {

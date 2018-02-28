@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "cd config && webpack-dev-server --hot --open",
+    "dev": "cd config && webpack-dev-server --quiet --hot --open",
     "build": "cd config && webpack-cli",
     "build-prod": "cd config && webpack-cli --env.prod",
     "build-analyze": "cd config && webpack-cli --env.prod --env.analyze",
@@ -34,6 +34,6 @@
     "webpack-cli": "^2.0.9",
     "webpack-dev-server": "^3.0.0",
     "webpack-merge": "^4.1.2",
-    "webpack-serve": "^0.1.4"
+    "webpack-stylish": "^0.1.6"
   }
 }
