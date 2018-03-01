@@ -1,5 +1,6 @@
 export default {
-    setToken: function (state, token) {
-        state.token = token
+    setToken: function (state, authObject) {
+        state.token = authObject.token
+        state.userId = authObject.user_id
     }
 }

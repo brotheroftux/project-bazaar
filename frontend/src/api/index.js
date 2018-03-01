@@ -53,8 +53,6 @@ export async function requestMagic (email) {
 
 export async function getToken (magic) {
     const response = await postData(api.getToken, { magic })
-    if (response)
-        return response.token
-    else
-        return undefined
+    
+    return response
 }

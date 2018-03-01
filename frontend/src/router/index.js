@@ -14,7 +14,7 @@ const routes = [
     { path: '/auth/:magic/', component: Auth, meta: { noAuth: true }},
     { path: '/auth/', component: Auth, meta: { noAuth: true }},
     { path: '/', component: Auth, meta: { noAuth: true }},
-    { path: '/user/:id/', component: UserProfile },
+    { path: '/user/:id/', name: 'profile', component: UserProfile },
     { path: '/project/:id/', component: ProjectPage }
 ]
 

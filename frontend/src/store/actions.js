@@ -16,9 +16,13 @@ export default {
         }
     },
     authorize: async function ({ commit }, magic) {
-        const token = await getToken(magic)
+        const response = await getToken(magic)
 
-        if (token)
-            commit('setToken', token)
+        if (response) {
+            commit({
+                type: 'setToken',
+                ...response
+            })
+        }
     }
 }

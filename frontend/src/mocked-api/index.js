@@ -5,7 +5,10 @@ export function requestMagic () {
 }
 
 export function getToken () {
-    return '__mock_token_value__'
+    return {
+        token: '__mock_token_value__',
+        user_id: 7
+    }
 }
 
 export function getUserProfile () {

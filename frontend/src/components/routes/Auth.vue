@@ -31,7 +31,10 @@ export default {
         if (magic) {
             await store.dispatch('authorize', magic)
             next({
-                path: '/'
+                name: 'profile',
+                params: {
+                    id: store.state.userId
+                }
             })
         } else {
             next()
