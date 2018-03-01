@@ -2,7 +2,6 @@
     <div class="user-profile">
         <div class="info">
             <div class="header">
-            
                     <!-- photo here-->
                 <div class='user-photo-overlay'>
                     <img class='user-photo' :src="user.user_photo">
@@ -155,7 +154,6 @@ export default {
     .header {
         display:flex;
         min-height:200px;
-        max-height:200px;
         margin-bottom:1rem;
     }
 
