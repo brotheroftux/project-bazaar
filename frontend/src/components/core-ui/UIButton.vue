@@ -15,4 +15,22 @@ export default {
         color:blue;
     }
 
+    .about-tab {
+        background-color: white;
+        outline: none;
+        border-style: none;
+        font-size: 1rem;
+        margin: 5px;
+        color:grey;
+    }
+    .about-tab-active {
+        background-color: white;
+        outline: none;
+        border-style: none;
+        font-size: 1rem;
+        margin: 5px;
+        color: black;
+        text-decoration: underline;
+    }
+
 </style>
