@@ -63,19 +63,11 @@
                 </div>
                 <!-- ЗАГЛУШКА, НУЖНО ЗАМЕНИТЬ НА РЕАЛЬНЫХ УЧАСТНИКОВ-->
                 <div class="team-members">
-                    <div class="team-member">
-                        <div class="team-member-photo">
-                            
-                        </div>
-                        <div class="team-member-textinfo">
-                            Роль: Тащит всех<br>
-                            Задачи: Тащить<br>
-                            Руководитель первый (это что такое вообще?)
-                        </div>
-                    </div>
+                    <team-member v-for="member in project.roles" :key="member.id" :member="member">
+                    </team-member>
                     <div class="team-member">
                         <div class="team-member-photo" style="background-color:gray">
-                            
+
                         </div>
                         <div class="team-member-textinfo">
                             Вакантная роль в команде<br>
@@ -105,6 +97,7 @@ import projectPage from '@/store/modules/projectPage'
 
 import UiButton from '@/components/core-ui/UIButton.vue'
 import TagCloud from '@/components/core-ui/TagCloud.vue'
+import TeamMember from '@/components/TeamMember.vue'
 import { mapState, mapActions, mapGetters } from 'vuex'
 
 export default {
@@ -139,7 +132,8 @@ export default {
     },
     components: {
         TagCloud,
-        UiButton
+        UiButton,
+        TeamMember
     }
 }
 </script>
@@ -223,8 +217,8 @@ export default {
 
     .team-member-photo {
         background-color:$blue;
-        min-height:50px;
-        min-width:50px;
+        height:80px;
+        width:80px;
     }
 
     .connect{
