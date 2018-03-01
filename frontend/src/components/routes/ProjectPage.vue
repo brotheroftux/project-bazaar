@@ -243,4 +243,8 @@ export default {
         display:flex;
         flex-direction: column;
     }
+
+    .interests, .instruments {
+        text-align:center;
+    }
 </style>
