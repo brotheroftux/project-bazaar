@@ -211,12 +211,8 @@ export default {
         flex-direction: column;
     }
 
-    .team-member-textinfo {
-
-    }
-
     .team-member-photo {
-        background-color:$blue;
+        background-color: $blue;
         height:80px;
         width:80px;
     }
@@ -242,5 +238,9 @@ export default {
     .description {
         display:flex;
         flex-direction: column;
+    }
+
+    .interests, .instruments {
+        text-align:center;
     }
 </style>

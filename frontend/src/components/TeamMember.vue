@@ -1,7 +1,7 @@
 <template>
     <div class="team-member">
         <div class="team-member-photo">
-            <div v-if="photo in member" class="photo-overlay">
+            <div v-if="member.photo" class="photo-overlay">
                 <img src='member.photo'>
             </div>
             <div v-else class="photo-mock">ФОТО</div>
