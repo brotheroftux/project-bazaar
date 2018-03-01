@@ -14,8 +14,14 @@
 </template>
 
 <script>
-export default {
 
+import Alert from './core-ui/Alert.vue'
+
+export default {
+    components: {
+        Alert
+    }
+    
 }
 </script>
 
