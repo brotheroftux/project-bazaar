@@ -1,14 +1,15 @@
 <template>
     <div class = 'alert'>
-        {{alertContent}}
+        {{alertContert}}
     </div>
 </template>
 
 <script>
 
- 
+
 export default {
-    props: ['alertContent'],
+    props: ['alertContert'],
+    
 }
 </script>
 
