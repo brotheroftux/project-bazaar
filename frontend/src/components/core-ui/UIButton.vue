@@ -1,10 +1,10 @@
 <template>
-    <button :class="className" @click = "$emit('buttonClick')"></button>
+    <button :class="className" @click = "$emit('buttonClick')">{{text}}</button>
 </template>
 
 <script>
 export default {
-    props: ['className']
+    props: ['className', 'text']
 }
 </script>
 
