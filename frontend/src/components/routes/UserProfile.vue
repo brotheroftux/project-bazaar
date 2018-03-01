@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="tabs">
-                
+
             </div>
         </div>
         <div class="skills">
@@ -40,15 +40,13 @@
 </template>
 
 <script>
-/*
 import store from '@/store'
 import userProfile from '@/store/modules/userProfile'
 
 import { mapState, mapActions } from 'vuex'
-*/
+
 import UiButton from '@/components/core-ui/UIButton.vue'
 export default {
-    /*
     computed: mapState('userProfile', [
         'user'
     ]),
@@ -72,22 +70,21 @@ export default {
         store.unregisterModule('userProfile')
         next()
     },
-*/
-    data: function () { 
-        return { 
-            user: {
-                lastname:'Панасовец',
-                firstname:'Вячеслав',
-                patronomic:'Викторович',
-                education : {
-                    qualification: 'Нубас'
-                },
-                work : {
+    // data: function () { 
+    //     return { 
+    //         user: {
+    //             lastname:'Панасовец',
+    //             firstname:'Вячеслав',
+    //             patronomic:'Викторович',
+    //             education : {
+    //                 qualification: 'Нубас'
+    //             },
+    //             work : {
 
-                }
-            }
-        }
-    },
+    //             }
+    //         }
+    //     }
+    // },
 
     components: {
         UiButton
