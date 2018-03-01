@@ -3,11 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "md5": "^2.2.1",
     "mongodb": "^3.0.3",
     "mongoose": "^5.0.7",
+    "nodemon": "^1.17.1",
+    "sendemail": "^3.3.0"
+  },
+  "devDependencies": {
     "nodemon": "^1.17.1"
   }
 }
