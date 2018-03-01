@@ -3,9 +3,15 @@ import postJSON from '@/util/postJSON'
 import api from '@/api/urls.js'
 
 export async function getUserProfile (id) {
-    const data = await fetch(api.getUserProfile(id))
+    let data, parsed
 
-    const parsed = data.json()
+    try {
+        data = await fetch(api.getUserProfile(id))
+        parsed = await data.json()
+    } catch (e) {
+        return undefined
+    }
+
 
     if (parsed.hasOwnProperty('response'))
         return parsed.response

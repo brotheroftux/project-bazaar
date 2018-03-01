@@ -20,7 +20,8 @@ const baseConfiguration = {
     output: {
         filename: '[name].js',
         chunkFilename: '[name].js',
-        path: resolve('build')
+        path: resolve('build'),
+        publicPath: '/'
     },
     resolve: {
         alias: {
