@@ -27,6 +27,7 @@
     "querystring-browser": "^1.0.4",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
+    "svg-sprite-loader": "^3.6.2",
     "vue": "^2.5.13",
     "vue-loader": "^14.1.1",
     "vue-router": "^3.0.1",
