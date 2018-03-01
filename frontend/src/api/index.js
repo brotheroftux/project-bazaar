@@ -45,10 +45,16 @@ export async function getProjectData (id) {
 
 export async function requestMagic (email) {
     const response = await postData(api.requestMagic, { email })
-    return response.magic
+    if (response)
+        return response.magic
+    else
+        return undefined
 }
 
 export async function getToken (magic) {
     const response = await postData(api.getToken, { magic })
-    return response.token
+    if (response)
+        return response.token
+    else
+        return undefined
 }
