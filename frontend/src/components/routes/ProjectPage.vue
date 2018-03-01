@@ -1,6 +1,11 @@
 <template>
     <div class="project-page">
+        <div class = 'info'>
 
+        </div>
+        <div class = 'clouds'>
+
+        </div>
     </div>
 </template>
 
@@ -35,5 +40,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+    .info {
+        display:flex;
+        flex-direction:column;
+        width: 70%;
+    }
+    .clouds {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+    }
 
 </style>

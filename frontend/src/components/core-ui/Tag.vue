@@ -26,6 +26,8 @@ export default {
         font-size: 0.8rem;
         display: inline-block;
         margin: 5px;
+        flex-grow: 1;
+        text-align: center; 
     }
 
 
