@@ -163,6 +163,10 @@ export default {
         min-height: 100px;
     }
 
+    .instruments, .interests {
+        text-align:center;
+    }
+    
     .clouds {
         display: flex;
         width: 30%;
