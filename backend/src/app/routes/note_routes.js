@@ -44,7 +44,7 @@ module.exports = function(app, database) {
             let result = {
               response : {
                 status: 200,
-                magic: '/auth/magic/' + ml
+                magic: '/auth/' + ml
               }
             }
             res.send(result)
