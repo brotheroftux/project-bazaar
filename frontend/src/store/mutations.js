@@ -1,1 +1,5 @@
-export default {}
+export default {
+    setToken: function (state, token) {
+        state.token = token
+    }
+}

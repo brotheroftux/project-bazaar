@@ -1,4 +1,4 @@
-import { requestMagic } from '@/mocked-api'
+import { requestMagic, getToken } from '@/mocked-api'
 
 export default {
     requestMagic: async function ({ dispatch }, email) {
@@ -13,5 +13,11 @@ export default {
                 text: 'Произошла ошибка'
             })
         }
+    },
+    authorize: async function ({ commit }, magic) {
+        const token = await getToken(magic)
+
+        if (token)
+            commit('setToken', token)
     }
 }
