@@ -89,11 +89,11 @@
         <div class = 'clouds'>
             <div class = 'interests'>
                 <div>Интересы</div>
-                    <tag-cloud :tags = "['dick', 'is', 'very', 'big','dick', 'is', 'very', 'big','dick', 'is', 'very', 'big','dick', 'is', 'very', 'big']"></tag-cloud> 
+                    <tag-cloud :tags = "interests"></tag-cloud> 
                 </div>
             <div class = 'instruments'>
                 <div>Инcтрументы</div>
-                    <tag-cloud :tags = "['kiril', 'pidor', 'ne', 'sdelal', 'zgkushku'] "></tag-cloud> 
+                    <tag-cloud :tags = "skills"></tag-cloud> 
                 </div>
         </div>
     </div>
@@ -105,15 +105,21 @@ import projectPage from '@/store/modules/projectPage'
 
 import UiButton from '@/components/core-ui/UIButton.vue'
 import TagCloud from '@/components/core-ui/TagCloud.vue'
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 
 export default {
     methods: mapActions('projectPage', [
         'getProjectData'
     ]),
-    computed: mapState('projectPage', [
-        'project'
-    ]),
+    computed: {
+        ...mapState('projectPage', [
+            'project'
+        ]),
+        ...mapGetters('projectPage', [
+            'skills',
+            'interests'
+        ])
+    },
     // vue-router
     beforeRouteEnter: function (to, from, next) {
         store.registerModule('projectPage', projectPage)
