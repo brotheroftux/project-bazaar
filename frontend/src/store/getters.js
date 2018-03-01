@@ -1,1 +1,5 @@
-export default {}
+export default {
+    isAuthorized: function (state) {
+        return state.token !== null
+    }
+}

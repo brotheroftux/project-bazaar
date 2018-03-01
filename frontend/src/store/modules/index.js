@@ -1,5 +1,5 @@
-// import userProfile from '@/store/modules/userProfile'
+import alert from '@/store/modules/alert'
 
 export default {
-
+    alert
 }
