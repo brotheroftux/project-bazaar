@@ -11,7 +11,9 @@ Vue.use(Vuex)
 
 const isDebug = process.env.NODE_ENV !== 'production'
 
-const state = {}
+const state = {
+    token: null
+}
 
 export default new Vuex.Store({
     state,
