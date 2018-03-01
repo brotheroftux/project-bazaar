@@ -3,11 +3,11 @@
         <router-link to="/">
             Home
         </router-link>
-        <router-link to="/user/1">
-            UserProfile component
+        <router-link to="/project/1">
+            ProjectPage
         </router-link>
-        <router-link to="/user/2">
-            Another user
+        <router-link to="/project/2">
+            Another project
         </router-link>
         <router-view />
     </div>
