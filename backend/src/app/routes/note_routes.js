@@ -29,6 +29,7 @@ module.exports = function(app, database) {
   /* Send_link
   /*-----------------------------------------------------------------*/
   app.post('/api/auth/send_link/', (req, res) => {
+    console.log(req.body)
     user.findOne(req.body, (err, item) => {
       if (err) {
         console.log(err)
@@ -41,12 +42,14 @@ module.exports = function(app, database) {
           if (err) {
               res.send({'error':'Don\'t update magic-link'});
           } else {
+
             let result = {
               response : {
                 status: 200,
                 magic: '/auth/' + ml
               }
             }
+            console.log(result)
             res.send(result)
           }
         })
