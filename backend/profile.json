@@ -1,8 +1,8 @@
 {
 	"id" : 1,
 	"type_user" : 2,
-	"firstname": "Али-Баба",
-	"lastname": "Вахрушев",
+	"first_name": "Али-Баба",
+	"last_name": "Вахрушев",
 	"patronymic": "альясович",
 	"email": "daily@gmail.com",
 	"user_photo": "",
