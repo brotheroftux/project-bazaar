@@ -30,7 +30,7 @@ async function postData (apiRoute, body) {
     }
     
     if (parsed.hasOwnProperty('response'))
-        return parsed.response.magic
+        return parsed.response
     else
         return undefined
 }
@@ -44,9 +44,11 @@ export async function getProjectData (id) {
 }
 
 export async function requestMagic (email) {
-    return await postData(api.requestMagic, { email })
+    const response = await postData(api.requestMagic, { email })
+    return response.magic
 }
 
 export async function getToken (magic) {
-    return await postData(api.getToken, { magic })
+    const response = await postData(api.getToken, { magic })
+    return response.token
 }
