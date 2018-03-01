@@ -1,6 +1,6 @@
 <template>
     <div class = 'alert'>
-        {{alertContert}}
+        {{alertContent}}
     </div>
 </template>
 
@@ -8,9 +8,10 @@
 
 
 export default {
-    props: ['alertContert'],
+    props: ['alertContent', 'type'],
     
 }
+
 </script>
 
 <style lang='scss'>
@@ -21,6 +22,7 @@ export default {
         border-radius: 5px;
         position: absolute;
         padding: 10px;
+        margin: auto;
         width: 200px;
         font-size: 0.8rem;
         background-color: rgb(197, 197, 197);

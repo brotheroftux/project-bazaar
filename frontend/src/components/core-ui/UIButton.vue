@@ -1,10 +1,10 @@
 <template>
-    <button :class="className" @click = "$emit('buttonClick')"></button>
+    <button :class="className" @click = "$emit('buttonClick')">{{text}}</button>
 </template>
 
 <script>
 export default {
-    props: ['className']
+    props: ['className', 'text']
 }
 </script>
 
@@ -13,6 +13,24 @@ export default {
     
     .authButton {
         color:blue;
+    }
+
+    .about-tab {
+        background-color: white;
+        outline: none;
+        border-style: none;
+        font-size: 1rem;
+        margin: 5px;
+        color:grey;
+    }
+    .about-tab-active {
+        background-color: white;
+        outline: none;
+        border-style: none;
+        font-size: 1rem;
+        margin: 5px;
+        color: black;
+        text-decoration: underline;
     }
 
 </style>

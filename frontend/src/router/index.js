@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import store from '@/store'
+//import store from '@/store'
 
 // route components
 import Auth from '@/components/routes/Auth.vue'

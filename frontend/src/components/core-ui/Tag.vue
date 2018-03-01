@@ -25,7 +25,7 @@ export default {
         padding-right: 5px;
         font-size: 0.8rem;
         display: inline-block;
-
+        margin: 5px;
     }
 
 
