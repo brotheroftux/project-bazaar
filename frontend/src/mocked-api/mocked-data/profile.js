@@ -1,11 +1,11 @@
 export default {
     'id' : 1,
     'type_user' : 2,
-    'firstname': 'Али-Баба',
-    'lastname': 'Вахрушев',
+    'first_name': 'Али-Баба',
+    'last_name': 'Вахрушев',
     'patronymic': 'альясович',
     'email': 'daily@gmail.com',
-    'user_photo': '',
+    'user_photo': 'http://studsovet.spbu.ru/images/sostav/anon_m.jpg',
     'education': {
         'university': 'СПбГУ',
         'qualification': 'математик',

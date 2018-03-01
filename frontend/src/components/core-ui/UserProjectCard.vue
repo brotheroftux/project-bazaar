@@ -42,7 +42,6 @@ export default {
         margin:20px;
         padding:10px;
         min-height:220px;
-        width:220px;
     }
 
     .title {

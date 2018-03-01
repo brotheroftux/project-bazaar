@@ -2,14 +2,12 @@
     <div class="user-profile">
         <div class="info">
             <div class="header">
-    
+            
                     <!-- photo here-->
-                <img class = 'user-photo' src="https://upload.wikimedia.org/wikipedia/commons/d/de/Windows_live_square.JPG">
-                
+                <img class='user-photo' :src="user.user_photo">
                 <div class="text-info">
                     <div class="full-name">
-                        
-                        {{user.lastname}} {{user.firstname}} {{user.patronomic}}
+                        {{user.last_name}} {{user.first_name}} {{user.patronomic}}
                     </div>
                     <div class="education">
                         <!-- education icon here-->
@@ -33,19 +31,19 @@
             </div>
              <div class="tabs">
                 <div class="tabsList">
-                    <ui-button text="О себе" @buttonClick=makeActive(1)>
+                    <ui-button :className="activeTab==1?'about-tab-active':'about-tab'" text="О себе" @buttonClick=makeActive(1)>
                     </ui-button>
-                    <ui-button text="Опыт работы" @buttonClick=makeActive(2)>
-                       
+                    <ui-button :className="activeTab==2?'about-tab-active':'about-tab'" text="Опыт работы" @buttonClick=makeActive(2)>
+                    
                     </ui-button>
-                    <ui-button text="Образование" @buttonClick=makeActive(3)>
-                       
+                    <ui-button :className="activeTab==3?'about-tab-active':'about-tab'" text="Образование" @buttonClick=makeActive(3)>
+                    
                     </ui-button>
-                    <ui-button text="Награды" @buttonClick=makeActive(4)>
-                       
+                    <ui-button :className="activeTab==4?'about-tab-active':'about-tab'" text="Награды" @buttonClick=makeActive(4)>
+                    
                     </ui-button>
-                    <ui-button text="Публикации" @buttonClick=makeActive(5)>
-                       
+                    <ui-button :className="activeTab==5?'about-tab-active':'about-tab'" text="Публикации" @buttonClick=makeActive(5)>
+                    
                     </ui-button>
                 </div>
                 <div v-if='activeTab==1'>{{user.about}}</div>
@@ -55,21 +53,17 @@
                 </user-project-card>
             </div>
         </div>
-            
         <div class = 'clouds'>
             <div class = 'interests'>
                 <div>Интересы</div>
                 <tag-cloud :tags = 'user.interests'></tag-cloud> 
-
             </div>
             <div class = 'instruments'>
                 <div>Инcтрументы</div>
                 <tag-cloud :tags = 'user.skills'></tag-cloud> 
-
             </div>
         </div>
     </div>
-    
 </template>
 
 <script>
@@ -127,13 +121,15 @@ export default {
 
 <style lang="scss" scoped>
     @import '~@/global-styles/vars.sass';
-
     .user-profile {
         display:flex;
+        margin:auto;
+        margin-top:50px;
+        width:80%;
     }
 
     .user-photo {
-        width: 200px;
+        height:100%;
         margin-right: 20px;
         border-radius: 5px;
     }
@@ -151,18 +147,19 @@ export default {
     .text-info {
         display:flex;
         flex-direction:column;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     
     .header {
         display:flex;
+        min-height:200px;
         max-height:200px;
+        margin-bottom:1rem;
     }
 
     .userProjects {
         width:100%;
         display:flex;
-        background-color:whitesmoke;
         min-height: 100px;
     }
 
@@ -184,4 +181,8 @@ export default {
         border-radius: 5px;
     }
     
+    .tabsList {
+        display:flex;
+        margin-bottom:3px;
+    }
 </style>
