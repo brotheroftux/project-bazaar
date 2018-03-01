@@ -1,7 +1,7 @@
 import mockedProfile from '@/mocked-api/mocked-data/profile'
 
 export function requestMagic () {
-    return true
+    return '/auth/__mock_magic__'
 }
 
 export function getToken () {

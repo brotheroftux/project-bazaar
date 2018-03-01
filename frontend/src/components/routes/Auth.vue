@@ -10,6 +10,7 @@
 import UiButton from '@/components/core-ui/UIButton.vue' 
 
 import { mapActions } from 'vuex'
+import store from '@/store'
  
 export default { 
     data: function () { 
@@ -22,7 +23,20 @@ export default {
     }, 
     methods: mapActions([
         'requestMagic'
-    ])
+    ]),
+    // vue-router
+    beforeRouteEnter: async function (to, from, next) {
+        const magic = to.params.magic
+
+        if (magic) {
+            await store.dispatch('authorize', magic)
+            next({
+                path: '/'
+            })
+        } else {
+            next()
+        }
+    }
 } 
 </script> 
  

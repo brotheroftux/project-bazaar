@@ -6,7 +6,12 @@ const bodyParser     = require('body-parser');
 const app            = express();
 const port = 8000;
 
-app.use(express.static('stat'));
+const fallback = require('express-history-api-fallback');
+const root = '../frontend/build';
+
+app.use(express.static(root));
+app.use(fallback('index.html', { root }))
+//app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 database = mongoose.createConnection('mongodb://localhost/hakaton_hr');
@@ -17,16 +22,11 @@ userSchema = new mongoose.Schema( {
     last_name: { type: String },
     email: {type: String},
     token: {type: String, default: ""},
-    magic_link: {type: String, default: ""}
+    magic_link: {type: String, default: ""},
+    token_date: {type: Date, default: Date.now()}
 });
 
 user = database.model("user", userSchema)
-
-newUser = new user({
-    first_name: "Кирилл",
-    last_name: "Постнов",
-    email: "kadeat@gmail.com"
-  })
 
 database.on("error", console.error.bind(console, "connection error:"));
 database.once("open", () => {
