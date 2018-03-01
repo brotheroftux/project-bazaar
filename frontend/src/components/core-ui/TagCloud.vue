@@ -28,5 +28,11 @@ export default {
         flex-wrap: wrap;
     }
 
+     .clouds {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+    }
+
 
 </style>
