@@ -12,7 +12,10 @@ function resolve (dir) {
 
 const baseConfiguration = {
     entry: {
-        app: '../src/main.js'
+        app: [
+            'babel-polyfill',
+            '../src/main.js'
+        ]
     },
     output: {
         filename: '[name].js',
@@ -52,7 +55,6 @@ const baseConfiguration = {
         new HtmlWebpackPlugin({
             inject: 'body',
             template: '../index.html',
-            chunks: ['vendor', 'app']
         }),
         new Stylish()
     ],

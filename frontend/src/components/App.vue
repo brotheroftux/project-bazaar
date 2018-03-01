@@ -1,6 +1,9 @@
 <template>
     <div>
-        Vue app
+        <router-link to="/user/1">
+            UserProfile component
+        </router-link>
+        <router-view />
     </div>
 </template>
 
