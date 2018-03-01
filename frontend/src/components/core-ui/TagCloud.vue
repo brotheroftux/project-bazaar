@@ -1,17 +1,17 @@
 <template>
     <div class = 'tags-cloud'>
-        <tag v-for = '(tag, index) in tags' :key = 'index'>{{tags}}</tag>
-    <div>
+        <tag v-for = '(tag, index) in tags' :key = 'index' :tag-value = 'tag' ></tag>
+    </div>
 
 </template>
 
 <script>
 
-import Tag from './Tag'
+import Tag from '@/components/core-ui/Tag.vue'
 
 export default {
     props: ['tags'],
-    compoments: {
+    components: {
         Tag
     }
 }
@@ -20,11 +20,12 @@ export default {
 <style lang='scss' scoped>
     @import '~@/global-styles/vars.sass';
 
-    .tag-cloud {
+    .tags-cloud {
         display: flex;
         padding : 5px;
-        width: 300px;
+        width: 100%;
         border-width: 1px;
+        flex-wrap: wrap;
     }
 
 
