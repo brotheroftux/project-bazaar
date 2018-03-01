@@ -12,12 +12,16 @@ function resolve (dir) {
 
 const baseConfiguration = {
     entry: {
-        app: '../src/main.js'
+        app: [
+            'babel-polyfill',
+            '../src/main.js'
+        ]
     },
     output: {
         filename: '[name].js',
         chunkFilename: '[name].js',
-        path: resolve('build')
+        path: resolve('build'),
+        publicPath: '/'
     },
     resolve: {
         alias: {
@@ -52,7 +56,6 @@ const baseConfiguration = {
         new HtmlWebpackPlugin({
             inject: 'body',
             template: '../index.html',
-            chunks: ['vendor', 'app']
         }),
         new Stylish()
     ],
