@@ -4,14 +4,15 @@ const mongoose       = require('mongoose');
 const bodyParser     = require('body-parser');
 //const db             = require('./config/db');
 const app            = express();
-const port = 8080;
+const port = 8000;
 
 const fallback = require('express-history-api-fallback');
 const root = '../frontend/build';
 
 app.use(express.static(root));
 app.use(fallback('index.html', { root }))
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 database = mongoose.createConnection('mongodb://localhost/hakaton_hr');
 

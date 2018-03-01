@@ -29,80 +29,85 @@ module.exports = function(app, database) {
   /* Send_link
   /*-----------------------------------------------------------------*/
   app.post('/api/auth/send_link/', (req, res) => {
-    console.log(req.body)
-    user.findOne(req.body, (err, item) => {
-      if (err) {
-        console.log(err)
-        res.send({'error':'Don\'t find user!'});
-      } else {
-        let ml =  md5(Date.now()) + md5('salt' + Date.now())
-        item.magic_link = ml
-        // FIXED IT добавить отправку на мыло. Если отправилось, то возвращать статус 200
-        user.update(req.body, {magic_link: ml}, (err, item) => {
-          if (err) {
-              res.send({'error':'Don\'t update magic-link'});
-          } else {
+  //  console.log(req.body.hasOwnProperty('email'))
 
-            let result = {
-              response : {
-                status: 200,
-                magic: '/auth/' + ml
+    if (req.body.hasOwnProperty('email')){
+      user.findOne(req.body, (err, item) => {
+        if (err) {
+          console.log(err)
+          res.send({'error':'Don\'t find user!'});
+        } else {
+          let ml =  md5(Date.now()) + md5('salt' + Date.now())
+          item.magic_link = ml
+          // FIXED IT добавить отправку на мыло. Если отправилось, то возвращать статус 200
+          user.update(req.body, {magic_link: ml}, (err, item) => {
+            if (err) {
+                res.send({'error':'Don\'t update magic-link'});
+            } else {
+
+              let result = {
+                response : {
+                  status: 200,
+                  magic: '/auth/' + ml
+                }
               }
+//              console.log(result)
+              res.send(result)
             }
-            console.log(result)
-            res.send(result)
-          }
-        })
+          })
 
+        }
+      })
+    } else {
+      let result = {
+        response : {
+          status: 500,
+          description: "do not email in query"
+        }
       }
-    })
+//      console.log(result)
+      res.send(result)
+  }
   });
 
 
 
 
   app.post('/api/auth/magic/', (req, res) => {
-//    res.send(req.body)
-    user.findOne({ magic_link: req.body.magic}, (err, item) => {
-      if (err) {
-        console.log(err)
-        res.send({'error':'Don\'t find user!'});
-      } else {
-        let tok = md5( Date.now() + item.email )
-        //res.send(tok)
+    //    res.send(req.body)
+    if (req.body.hasOwnProperty('magic')){ 
+      user.findOne({ magic_link: req.body.magic}, (err, item) => {
+        if (err) {
+          console.log(err)
+          res.send({'error':'Don\'t find user!'});
+        } else {
+          let tok = md5( Date.now() + item.email )
+          //res.send(tok)
 
-        user.update({ magic_link: req.body.magic}, {token: tok}, (err, item) => {
-          if (err) {
-              res.send({'error':'Don\'t update token'});
-          } else {
-            let result = {
-              response : {
-                status: 200,
-                token: tok
+          user.update({ magic_link: req.body.magic}, {token: tok}, (err, item) => {
+            if (err) {
+                res.send({'error':'Don\'t update token'});
+            } else {
+              let result = {
+                response : {
+                  status: 200,
+                  token: tok
+                }
               }
+              res.send(result)
             }
-            res.send(result)
-          }
-        })
-
-
-
-/*
-        item.token =  tok
-
-        let result = {
-          response : {
-            status: 200,
-            token: tok
-          }
+          })
         }
-
-        res.send(result)
-*/
+      })
+    } else {
+      let result = {
+        response : {
+          status: 500,
+          description: "do not magic in query"
+        }
       }
-    })
-
-
+      res.send(result)
+    }
   });
 
 
