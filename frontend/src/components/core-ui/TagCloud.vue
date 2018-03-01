@@ -6,10 +6,14 @@
 </template>
 
 <script>
+
 import Tag from './Tag'
 
 export default {
     props: ['tags'],
+    compoments: {
+        Tag
+    }
 }
 </script>
 

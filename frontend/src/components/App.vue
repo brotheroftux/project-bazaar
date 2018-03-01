@@ -1,15 +1,26 @@
 <template>
     <div>
+<<<<<<< Updated upstream
         <router-link to="/user/1">
             UserProfile component
         </router-link>
         <router-view />
+=======
+        Hello
+        <alert> </alert>
+>>>>>>> Stashed changes
     </div>
 </template>
 
 <script>
-export default {
 
+import Alert from './core-ui/Alert.vue'
+
+export default {
+    components: {
+        Alert
+    }
+    
 }
 </script>
 

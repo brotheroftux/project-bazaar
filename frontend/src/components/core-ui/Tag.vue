@@ -7,12 +7,7 @@
 <script>
 export default {
     props: ['tagValue'],
-    data()  {
-        return{
-            content: 'tag-value'
-        }
-    }
-
+   
 }
 </script>
 
