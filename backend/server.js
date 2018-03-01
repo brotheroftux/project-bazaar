@@ -17,7 +17,8 @@ userSchema = new mongoose.Schema( {
     last_name: { type: String },
     email: {type: String},
     token: {type: String, default: ""},
-    magic_link: {type: String, default: ""}
+    magic_link: {type: String, default: ""},
+    token_date: {type: Date, default: Date.now()}
 });
 
 user = database.model("user", userSchema)
