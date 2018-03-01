@@ -10,7 +10,8 @@ module.exports = {
         "plugin:vue/essential"
     ],
     "parserOptions": {
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaVersion": 2017
     },
     "rules": {
         "indent": [
