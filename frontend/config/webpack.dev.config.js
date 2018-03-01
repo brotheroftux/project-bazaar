@@ -6,5 +6,10 @@ module.exports = {
         rules: util.styleLoaders({
             extract: false
         })
+    },
+    devServer: {
+        proxy: {
+            '/api': 'http://localhost:8000'
+        }
     }
 }
