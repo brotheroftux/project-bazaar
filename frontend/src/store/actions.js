@@ -1,4 +1,4 @@
-import { requestMagic, getToken } from '@/mocked-api'
+import { requestMagic, getToken } from '@/api'
 
 export default {
     requestMagic: async function ({ dispatch }, email) {
