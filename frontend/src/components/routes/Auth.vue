@@ -30,6 +30,9 @@ export default {
 
         if (magic) {
             await store.dispatch('authorize', magic)
+            next({
+                path: '/'
+            })
         } else {
             next()
         }

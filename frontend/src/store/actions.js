@@ -5,6 +5,7 @@ export default {
         const result = await requestMagic(email)
 
         if (result) {
+            window.location.href = result
             dispatch('alertInfo', {
                 text: 'Ссылка отправлена на указанный e-mail'
             })
