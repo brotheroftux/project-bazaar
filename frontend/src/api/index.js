@@ -33,7 +33,7 @@ export async function requestMagic (email) {
     const parsed = result.json()
 
     if (parsed.hasOwnProperty('response'))
-        return true
+        return parsed.response.magic
     else
-        return false
+        return undefined
 }
