@@ -2,16 +2,18 @@
     <div class="user-profile">
         <div class="info">
             <div class="header">
-                <div class="user-photo">
+    
                     <!-- photo here-->
-                    <img style="height:100%" src="https://upload.wikimedia.org/wikipedia/commons/d/de/Windows_live_square.JPG">
-                </div>
+                <img class = 'user-photo' src="https://upload.wikimedia.org/wikipedia/commons/d/de/Windows_live_square.JPG">
+                
                 <div class="text-info">
-                    <div class="fullName">
-                         {{user.lastname}} {{user.firstname}} {{user.patronomic}}
+                    <div class="full-name">
+                        
+                        {{user.lastname}} {{user.firstname}} {{user.patronomic}}
                     </div>
                     <div class="education">
                         <!-- education icon here-->
+                        <img src = "https://drive.google.com/drive/u/0/folders/1KRFH1630DzGwPG3rYn-XJXDHhiWSBNNJ">
                         <div>
                             {{user.education.qualification}}, {{user.education.degree}}, {{user.education.university}}
                         </div>
@@ -26,15 +28,27 @@
                         {{user.email}}
                     </div>
                     <!-- need to add buttonClick Handler-->
-                    <ui-button text="Связаться" class="connect"></ui-button>
+                    <ui-button text='Связаться' class="connect"></ui-button>
                 </div>
             </div>
-            <div class="tabs">
+           
+            
+        </div>
+
+
+
+         <div class = 'clouds'>
+            <div class = 'interests'>
+                <div>Интересы</div>
+                <tag-cloud :tags = 'user.interests'></tag-cloud> 
 
             </div>
-        </div>
-        <div class="skills">
+            <div class = 'instruments'>
+                <div>Инcтрументы</div>
+                <tag-cloud :tags = 'user.skills'></tag-cloud> 
 
+            </div>
+            
         </div>
     </div>
 </template>
@@ -42,6 +56,7 @@
 <script>
 import store from '@/store'
 import userProfile from '@/store/modules/userProfile'
+import TagCloud from '@/components/core-ui/TagCloud.vue'
 
 import { mapState, mapActions } from 'vuex'
 
@@ -70,30 +85,17 @@ export default {
         store.unregisterModule('userProfile')
         next()
     },
-    // data: function () { 
-    //     return { 
-    //         user: {
-    //             lastname:'Панасовец',
-    //             firstname:'Вячеслав',
-    //             patronomic:'Викторович',
-    //             education : {
-    //                 qualification: 'Нубас'
-    //             },
-    //             work : {
-
-    //             }
-    //         }
-    //     }
-    // },
 
     components: {
-        UiButton
+        UiButton,
+        TagCloud
     }
     
 }
 </script>
 
 <style lang="scss" scoped>
+    @import '~@/global-styles/vars.sass';
 
     .user-profile {
         display:flex;
@@ -101,10 +103,15 @@ export default {
 
     .user-photo {
         height:100%;
+        width: 200px;
+        margin-right: 20px;
+        border-radius: 5px;
+
     }
 
     .info {
         display:flex;
+        width: 70%;
     }
 
     .skills {
@@ -120,6 +127,24 @@ export default {
     .header {
         display:flex;
 
-        max-height:100px;
+        max-height:200px;
     }
+    .clouds {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+    }
+
+    .full-name{
+        font-size: 1.5rem;
+        color: $blue;
+    }
+
+    .connect{
+        font-size: 1rem;
+        color: white;
+        background-color: $blue;
+        border-radius: 5px;
+    }
+    
 </style>
