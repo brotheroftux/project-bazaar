@@ -4,7 +4,9 @@
             <div class="header">
             
                     <!-- photo here-->
-                <img class='user-photo' :src="user.user_photo">
+                <div class='user-photo-overlay'>
+                    <img class='user-photo' :src="user.user_photo">
+                </div>
                 <div class="text-info">
                     <div class="full-name">
                         {{user.last_name}} {{user.first_name}} {{user.patronomic}}
@@ -129,7 +131,7 @@ export default {
     }
 
     .user-photo {
-        height:100%;
+        width:100%;
         margin-right: 20px;
         border-radius: 5px;
     }
@@ -184,5 +186,11 @@ export default {
     .tabsList {
         display:flex;
         margin-bottom:3px;
+    }
+
+    .user-photo-overlay {
+        display:flex;
+        justify-content:center;
+        align-items:center;
     }
 </style>
