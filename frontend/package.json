@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "cd config && webpack-dev-server --quiet --hot --open",
+    "dev": "cd config && webpack-dev-server --quiet --hot --open --history-api-fallback",
     "build": "cd config && webpack-cli",
     "build-prod": "cd config && webpack-cli --env.prod",
     "build-analyze": "cd config && webpack-cli --env.prod --env.analyze",
