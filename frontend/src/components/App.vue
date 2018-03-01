@@ -3,8 +3,8 @@
         <router-link to="/">
             Home
         </router-link>
-        <router-link to="/project/1">
-            ProjectPage
+        <router-link to="/user/1">
+            User Page
         </router-link>
         <router-link to="/project/2">
             Another project

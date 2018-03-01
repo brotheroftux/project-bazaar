@@ -19,6 +19,22 @@ async function fetchData (apiRoute) {
         return undefined
 }
 
+async function postData (apiRoute, body) {
+    let result, parsed
+
+    try {
+        result = await postJSON(apiRoute, body)
+        parsed = await result.json()
+    } catch (e) {
+        return undefined
+    }
+    
+    if (parsed.hasOwnProperty('response'))
+        return parsed.response.magic
+    else
+        return undefined
+}
+
 export async function getUserProfile (id) {
     return await fetchData(api.getUserProfile(id))
 }
@@ -28,12 +44,9 @@ export async function getProjectData (id) {
 }
 
 export async function requestMagic (email) {
-    const result = await postJSON(api.requestMagic, { email })
+    return await postData(api.requestMagic, { email })
+}
 
-    const parsed = result.json()
-
-    if (parsed.hasOwnProperty('response'))
-        return parsed.response.magic
-    else
-        return undefined
+export async function getToken (magic) {
+    return await postData(api.getToken, { magic })
 }
