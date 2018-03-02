@@ -1,6 +1,5 @@
 module.exports = [
     {
-        'id': 1,
         'type_project': 'ВКР',
         'project_photo': 'https://pbs.twimg.com/profile_images/949374088249671680/MuxDEZpD_400x400.jpg',
         'title': 'Алгоритмы построения оптимальных управлений в динамических системах',
@@ -17,7 +16,6 @@ module.exports = [
     },
 
     {
-        'id': 2,
         'type_project': 'ВКР',
         'project_photo': 'https://pbs.twimg.com/profile_images/949374088249671680/MuxDEZpD_400x400.jpg',
         'title': 'Анализ макроэкономических тенденций на основе модели межотраслевого баланса В.В. Леонтьева',
@@ -34,7 +32,6 @@ module.exports = [
     },
 
     {
-        'id': 3,
         'type_project': 'Стажировка',
         'project_photo': 'https://upload.wikimedia.org/wikipedia/commons/7/71/Weaved_truncated_square_tiling.png',
         'title': 'Unity разработчик',

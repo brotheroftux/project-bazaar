@@ -1,11 +1,11 @@
 module.exports = [
     {
-        'id': 1001,
+
         'id_project': 1,
         'title': 'Студент-исследователь',
         'status':{
             'value':1,
-            'id_user':'3',
+            'id_user':'3'
         },
         'description':`- Анализ достаточности команд STP;
 - Анализ достаточности команд SiteXML Macrolanguage;
@@ -18,12 +18,12 @@ module.exports = [
     },
 
     {
-        'id': 1002,
+
         'id_project': 1,
         'title': 'Рецензент',
         'status':{
             'value': 0,
-            'id_user':'',
+            'id_user':''
         },
         'description':'Написать рецензию на ВКР',
         'awards': '1500 руб.',
@@ -33,12 +33,11 @@ module.exports = [
     },
 
     {
-        'id': 1003,
         'id_project': 1,
         'title': 'Научный руководитель',
         'status':{
             'value': 0,
-            'id_user':'',
+            'id_user':''
         },
         'description': '',
         'awards': '',
@@ -49,12 +48,12 @@ module.exports = [
 
 
     {
-        'id': 2001,
+
         'id_project': 2,
         'title': 'Студент-исследователь',
         'status':{
             'value':0,
-            'id_user':'',
+            'id_user':''
         },
         'description':`- Анализ достаточности команд STP;
 - Анализ достаточности команд SiteXML Macrolanguage;
@@ -67,12 +66,12 @@ module.exports = [
     },
 
     {
-        'id': 2002,
+
         'id_project': 2,
         'title': 'Научный руководитель',
         'status':{
             'value': 0,
-            'id_user':'',
+            'id_user':''
         },
         'description': '',
         'awards': '5000 руб.',
@@ -82,12 +81,12 @@ module.exports = [
     },
 
     {
-        'id': 3001,
+
         'id_project': 3,
         'title': 'Студент-стажер',
         'status':{
             'value':0,
-            'id_user':'2',
+            'id_user':'2'
         },
         'description':`- Анализ достаточности команд STP;	- Анализ достаточности команд SiteXML Macrolanguage;
 	- Анализ безопасности сайтов на базе SiteXML; - Анализ модульной системы SiteXML; `,
@@ -98,32 +97,17 @@ module.exports = [
     },
 
     {
-        'id': 3002,
+
         'id_project': 3,
         'title': 'Куратор',
         'status':{
             'value': 2,
-            'id_user':'',
+            'id_user':''
         },
         'description': '',
         'awards': '5000 руб.',
         'demands':'Доступность хотя бы раз в неделю',
         'interests':['Оптимальное управление', 'Динамическе сисетмы', 'Теория автоматического управления', 'Линейная алгебра', 'дифференциальные уравнения',  'Оптимизация программных движений'],
         'skills':['MatLab','C/C++', 'Maple']
-    },
-
-
-    {
-        'id': 3,
-        'type_project': 'Стажировка',
-        'title': 'Unity разработчик',
-        'id_creator': 2,
-        'description_project':'Разработка на Unity с последующей публикацией для iOS и Android игрового приложения.',
-        'date_start':'01.09.2018',
-        'date_finish':'01.11.2018',
-        'site': 'logomotiv.ru',
-        'results': 'Отзыв ',
-        'resources': 'Не младше 2 курса, минимальная занятость в неделю -- 20 часов. Желание быстро разобраться и включиться в процесс. Работа над реальными проектами. ',
-        'roles': [3001, 3002]
     }
 ]

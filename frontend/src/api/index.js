@@ -9,7 +9,8 @@ async function fetchData (apiRoute) {
         data = await fetch(apiRoute)
         parsed = await data.json()
     } catch (e) {
-        return undefined
+        console.log(e)
+        // return undefined
     }
 
 
@@ -28,7 +29,7 @@ async function postData (apiRoute, body) {
     } catch (e) {
         return undefined
     }
-    
+
     if (parsed.hasOwnProperty('response'))
         return parsed.response
     else
@@ -53,6 +54,6 @@ export async function requestMagic (email) {
 
 export async function getToken (magic) {
     const response = await postData(api.getToken, { magic })
-    
+
     return response
 }
