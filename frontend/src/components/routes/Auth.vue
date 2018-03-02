@@ -70,7 +70,7 @@ export default {
     }
  
     .welcome {
-        margin-bottom:20px;
+        margin-bottom:40px;
         font-size:4rem;
         color:#444;
     }
