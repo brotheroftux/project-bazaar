@@ -17,7 +17,7 @@
                     </div>
                     <div class="project-dates">
                         <div class="info-titles">
-                            Реализация проекта: 
+                            Реализация проекта:
                         </div>
                         <div>
                             с {{project.date_start}} по {{project.date_finish}} год
@@ -25,7 +25,7 @@
                     </div>
                     <div class="project-organisation">
                         <div class="info-titles">
-                            Организация: 
+                            Организация:
                         </div>
                         <div>
                             {{project.organisation}}
@@ -33,7 +33,7 @@
                     </div>
                     <div class="project-results">
                         <div class="info-titles">
-                            Результаты: 
+                            Результаты:
                         </div>
                         <div>
                             {{project.results}}
@@ -41,7 +41,7 @@
                     </div>
                    <div class="project-resources">
                         <div class="info-titles">
-                            Ресурсы: 
+                            Ресурсы:
                         </div>
                         <div>
                             {{project.resources}}
@@ -80,11 +80,11 @@
         <div class = 'clouds'>
             <div class = 'interests'>
                 <div class = 'interests-title'>Интересы</div>
-                    <tag-cloud :tags="interests"></tag-cloud> 
+                    <tag-cloud :tags="interests"></tag-cloud>
                 </div>
             <div class = 'instruments'>
                 <div class = 'interests-title'>Инcтрументы</div>
-                    <tag-cloud :tags="skills"></tag-cloud> 
+                    <tag-cloud :tags="skills"></tag-cloud>
                 </div>
         </div>
     </div>
@@ -119,13 +119,13 @@ export default {
     },
     beforeRouteUpdate: function (to, from, next) {
         const userId = to.params.id
-        
+
         this.getProjectData(userId)
-        
+
         next()
     },
     beforeRouteLeave: function (to, from, next) {
-        setTimeout(() => store.unregisterModule('projectPage'), 0)
+        store.unregisterModule('projectPage')
         next()
     },
     components: {
@@ -173,7 +173,7 @@ export default {
         flex-direction:column;
         justify-content: space-between;
     }
-    
+
     .header {
         display:flex;
         min-height:200px;
@@ -202,7 +202,7 @@ export default {
         display:flex;
         flex-direction: column;
     }
-    
+
     .team-member {
         display:flex;
     }
@@ -224,7 +224,7 @@ export default {
         background-color: $blue;
         border-radius: 5px;
     }
-    
+
     .tabsList {
         display:flex;
         margin-bottom:3px;

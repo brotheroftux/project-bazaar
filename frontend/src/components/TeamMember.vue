@@ -1,16 +1,16 @@
 <template>
     <div class="team-member">
         <div class="team-member-photo">
-            <div v-if="member.user && member.user.photo" class="photo-overlay">
-                <img :src="member.user.photo">
+            <div v-if="member.user" class="photo-overlay">
+                <img :src="member.user.user_photo">
             </div>
             <div v-else class="photo-mock">ФОТО</div>
         </div>
         <div class="team-member-textinfo">
             <div class="member-title">{{member.title}}</div>
             <div class="member-title" v-if="member.user">
-                <router-link :to="'/user/' + member.status.id_user">
-                    {{ member.user.firstname }} {{ member.user.lastname }}
+                <router-link :to="'/user/' + member.id_user">
+                    {{ member.user.first_name }} {{ member.user.last_name }}
                 </router-link>
             </div>
             <div class="cutted-description">{{cutedDescription}}</div>
@@ -56,7 +56,7 @@ export default {
         justify-content:space-around;
         align-items:center;
     }
-    
+
     .team-member-photo {
         display:flex;
         justify-content:center;
@@ -72,6 +72,10 @@ export default {
         display:flex;
         justify-content:center;
         align-items:center;
+    }
+
+    .photo-overlay img {
+        width: 100%
     }
 
     .photo-mock {

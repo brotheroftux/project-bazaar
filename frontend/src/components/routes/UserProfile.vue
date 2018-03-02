@@ -34,22 +34,22 @@
 
                 </div>
             </div>
-           
+
                 <div class="tabs">
                     <div class="tabsList">
                         <ui-button :className="activeTab==1?'about-tab-active':'about-tab'" text="О себе" @buttonClick=makeActive(1)>
                         </ui-button>
                         <ui-button :className="activeTab==2?'about-tab-active':'about-tab'" text="Опыт работы" @buttonClick=makeActive(2)>
-                        
+
                         </ui-button>
                         <ui-button :className="activeTab==3?'about-tab-active':'about-tab'" text="Образование" @buttonClick=makeActive(3)>
-                        
+
                         </ui-button>
                         <ui-button :className="activeTab==4?'about-tab-active':'about-tab'" text="Награды" @buttonClick=makeActive(4)>
-                        
+
                         </ui-button>
                         <ui-button :className="activeTab==5?'about-tab-active':'about-tab'" text="Публикации" @buttonClick=makeActive(5)>
-                        
+
                         </ui-button>
                     </div>
                     <div class="about-user" v-if='activeTab==1'>{{user.about}}</div>
@@ -68,11 +68,11 @@
         <div class = 'clouds'>
             <div class = 'interests'>
                 <div class='interests-title'>Интересы</div>
-                <tag-cloud :tags = 'user.interests'></tag-cloud> 
+                <tag-cloud :tags = 'user.interests'></tag-cloud>
             </div>
             <div class = 'instruments'>
                 <div class='interests-title'>Инcтрументы</div>
-                <tag-cloud :tags = 'user.skills'></tag-cloud> 
+                <tag-cloud :tags = 'user.skills'></tag-cloud>
             </div>
         </div>
     </div>
@@ -82,11 +82,11 @@
 import store from '@/store'
 import userProfile from '@/store/modules/userProfile'
 import TagCloud from '@/components/core-ui/TagCloud.vue'
- 
 
- 
+
+
 import { mapGetters, mapActions } from 'vuex'
- 
+
 import UiButton from '@/components/core-ui/UIButton.vue'
 import UserProjectCard from '@/components/core-ui/UserProjectCard.vue'
 export default {
@@ -96,7 +96,7 @@ export default {
     ]),
     methods: {
         ...mapActions('userProfile', [
-            'getUserProfile'    
+            'getUserProfile'
         ]),
         makeActive: function (id) {
             this.activeTab = id
@@ -105,18 +105,18 @@ export default {
     // vue-router
     beforeRouteEnter: function (to, from, next) {
         store.registerModule('userProfile', userProfile)
- 
+
         store.dispatch('userProfile/getUserProfile', to.params.id).then(next)
     },
     beforeRouteUpdate: function (to, from, next) {
         const userId = to.params.id
-       
+
         this.getUserProfile(userId)
-       
+
         next()
     },
     beforeRouteLeave: function (to, from, next) {
-        setTimeout(() => store.unregisterModule('userProfile'), 0)
+        store.unregisterModule('userProfile')
         next()
     },
     data: function () {
@@ -124,19 +124,19 @@ export default {
             activeTab: 1
         }
     },
- 
+
     components: {
         UiButton,
         UserProjectCard,
         TagCloud
     }
-   
+
 }
 </script>
 
 <style lang="scss" scoped>
     @import '~@/global-styles/vars.sass';
-    
+
     .user-profile {
         display:flex;
         margin:auto;
@@ -174,14 +174,14 @@ export default {
         flex-direction:column;
         justify-content: space-between;
     }
-    
+
     .header {
         display:flex;
         min-height:200px;
         margin:0 15px 10px 15px;
         background-color: #fff;
       //  border: 1px solid #aaa;
-     //   border-radius: 3px; 
+     //   border-radius: 3px;
      //   box-shadow: 1px 2px 0 0 #ddd;
 
         border-bottom: 2px solid #dee3eb;
@@ -198,7 +198,7 @@ export default {
 
     .userProjects {
         width:100%;
-    
+
         display:flex;
         min-height: 100px;
     }
@@ -232,7 +232,7 @@ export default {
         padding: 4px;
         border: 0;
     }
-    
+
     .tabs{
         margin: 10px 15px 15px 20px;
     }
@@ -246,7 +246,7 @@ export default {
 
     .user-photo-container {
         display:flex;
-        justify-content:center; 
+        justify-content:center;
         align-items:center;
     }
 
