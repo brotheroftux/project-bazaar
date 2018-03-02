@@ -27,7 +27,7 @@ export default {
         color: #44484f;
         letter-spacing: 0;
         padding: 7px 3px;
-        border-radius: 4px 0 0 4px;
+        border-radius: 4px 4px 4px 4px;
         background: #f8f9fc;
         border: 1px solid #dee3eb;
         transition: all .2s linear;
