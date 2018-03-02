@@ -177,12 +177,14 @@ export default {
         background-color: #fff;
       //  border: 1px solid #aaa;
      //   border-radius: 3px; 
-        border-bottom: 2px solid #ddd
      //   box-shadow: 1px 2px 0 0 #ddd;
+
+        border-bottom: 2px solid #dee3eb;
     }
 
     .inform-panel{
-        background-color: #ddd;
+        background-color: #f8f9fc;
+        border: 1px solid #dee3eb;
      //   border: 1px solid #aaa;
         margin: 10px 15px 10px 15px;
         border-radius: 3px;
@@ -233,8 +235,8 @@ export default {
     .tabsList {
         display:flex;
         margin-bottom:3px;
-        justify-content: space-between
-
+        justify-content: space-between;
+        flex-wrap:wrap;
     }
 
     .user-photo-container {

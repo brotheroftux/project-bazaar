@@ -16,18 +16,28 @@ export default {
 
     .tag {
     //    background-color:#fafafa;
-        border-radius: 3px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: #888;
-       // box-shadow: 1px 2px 2px 1px rgb(202, 202, 202);
-        color:#444;
-        padding: 6px;
-        font-size: 0.9em;
+        //box-shadow: 1px 1px 1px 1px #015387;
+        //opacity:.7;
         display: inline-block;
         margin: 5px;
         flex-grow: 1;
         text-align: center; 
+
+        font-weight: 400;
+        font-size: 16px;
+        color: #44484f;
+        letter-spacing: 0;
+        padding: 7px 1px;
+        border-radius: 4px 0 0 4px;
+        background: #f8f9fc;
+        border: 1px solid #dee3eb;
+        transition: all .2s linear;
+        box-shadow: none;
+        //background-color:#015387;
+    }
+
+    .tag:hover {
+        background : rgb(163, 197, 255);
     }
 
 
