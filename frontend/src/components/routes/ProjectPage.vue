@@ -71,7 +71,7 @@
                         <div class="team-member-textinfo">
                             Вакантная роль в команде<br>
                             Задачи: тащить еще лучше<br>
-                            <ui-button text="подать заявку на участие"></ui-button>
+                            <ui-button className = 'connect' text="подать заявку на участие"></ui-button>
                         </div>
                     </div>
                 </div>
@@ -199,6 +199,7 @@ export default {
 
     .team {
         display:flex;
+        margin-top: 10px;
         flex-direction: column;
     }
 
@@ -251,6 +252,7 @@ export default {
     }
     .into-header {
         margin:10px 10px 10px 0;
+        font-weight: bold;
     }
     .project-type{
         font-weight: bold;
