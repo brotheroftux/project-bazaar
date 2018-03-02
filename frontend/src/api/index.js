@@ -9,8 +9,7 @@ async function fetchData (apiRoute) {
         data = await fetch(apiRoute)
         parsed = await data.json()
     } catch (e) {
-        console.log(e)
-        // return undefined
+        return undefined
     }
 
 

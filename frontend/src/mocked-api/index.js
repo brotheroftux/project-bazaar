@@ -15,7 +15,7 @@ export function getToken () {
 }
 
 export function getUserProfile () {
-    return mockedProfile
+    return { user: mockedProfile, roles: mockedRoles }
 }
 
 export function getUserProfileShort () {

@@ -81,13 +81,14 @@ import TagCloud from '@/components/core-ui/TagCloud.vue'
  
 
  
-import { mapState, mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
  
 import UiButton from '@/components/core-ui/UIButton.vue'
 import UserProjectCard from '@/components/core-ui/UserProjectCard.vue'
 export default {
-    computed: mapState('userProfile', [
-        'user'
+    computed: mapGetters('userProfile', [
+        'user',
+        'roles'
     ]),
     methods: {
         ...mapActions('userProfile', [
