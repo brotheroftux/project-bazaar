@@ -1,8 +1,8 @@
 <template>
     <div class="userProjectCard">
-            <div @click="changeSide" class="cardSide" v-if='activeSide==0'>
-                <div class="title">{{userProjectCard.title}}</div>
-                <div class="role">{{userProjectCard.role.title}}</div>
+            <div class="cardSide" v-if='activeSide==0'>
+                <div class="title">{{userProjectCard.project.title}}</div>
+                <div class="role">{{userProjectCard.title}}</div>
                 <ui-button @buttonClick="changeSide" text="Подробнее" class="changeCardSide"></ui-button>
             </div>
 
