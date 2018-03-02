@@ -71,6 +71,7 @@ export default {
 
     .photo-mock {
         background-color:$blue;
-
+        color:white;
+        font-weight:500;
     }
 </style>
