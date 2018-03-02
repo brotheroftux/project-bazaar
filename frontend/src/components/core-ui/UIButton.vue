@@ -40,7 +40,14 @@ export default {
         font-size: 1.2rem;
         margin: 7px;
         color: #888;
+        transition: all .2s linear;
     }
+
+    .about-tab:hover {
+        color:#444;
+        text-decoration: underline;
+    }
+
     .about-tab-active {
         background-color: #fff;
         outline: none;
