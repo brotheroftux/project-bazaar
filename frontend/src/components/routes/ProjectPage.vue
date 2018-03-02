@@ -195,7 +195,7 @@ export default {
     .project-title{
         font-size: 1.5rem;
         color: $blue;
-        margin:10px;
+        margin:5px;
     }
 
     .team {
@@ -263,7 +263,7 @@ export default {
 
     .project-dates, .project-organisation, .project-results, .project-resources, .project-type {
         font-size: 0.85rem;
-        margin: 10px;
+        margin: 5px;
     }
 
     .info-content {
