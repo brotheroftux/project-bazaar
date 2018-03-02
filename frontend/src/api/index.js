@@ -43,6 +43,14 @@ export async function getProjectData (id) {
     return await fetchData(api.getProjectData(id))
 }
 
+export async function getUserProfileShort (id) {
+    return await fetchData(api.getUserProfileShort(id))
+}
+
+export async function getProjectDataShort (id) {
+    return await fetchData(api.getProjectDataShort(id))
+}
+
 export async function requestMagic (email) {
     const response = await postData(api.requestMagic, { email })
     if (response)

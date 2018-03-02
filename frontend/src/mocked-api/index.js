@@ -2,6 +2,7 @@ import mockedProfile from '@/mocked-api/mocked-data/profile'
 import mockedProjects from '@/mocked-api/mocked-data/projects'
 import mockedRoles from '@/mocked-api/mocked-data/roles'
 import mockedProfileShort from '@/mocked-api/mocked-data/shortProfile'
+import mockedProjectShort from '@/mocked-api/mocked-data/shortProject'
 
 export function requestMagic () {
     return '/auth/__mock_magic__'
@@ -20,6 +21,10 @@ export function getUserProfile () {
 
 export function getUserProfileShort () {
     return mockedProfileShort
+}
+
+export function getProjectDataShort () {
+    return mockedProjectShort
 }
 
 export function getProjectData () {

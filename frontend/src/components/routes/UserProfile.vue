@@ -56,7 +56,7 @@
                 </div>
             <div class='inform-panel'>
                 <div class = "userProjects">
-                    <user-project-card v-for="userProject in user.projects" :key="userProject.id" :userProjectCard="userProject">
+                    <user-project-card v-for="userProject in roles" :key="userProject.id" :userProjectCard="userProject">
                     </user-project-card>
                 </div>
             </div>
