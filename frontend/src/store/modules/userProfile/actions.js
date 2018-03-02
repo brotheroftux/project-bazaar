@@ -1,4 +1,4 @@
-import { getUserProfile, getProjectDataShort } from '@/api'
+import { getUserProfile, getProjectDataShort } from '@/mocked-api'
 
 export default {
     getUserProfile: async function ({ state, commit }, id) {

@@ -115,9 +115,8 @@ export default {
 
         next()
     },
-    beforeRouteLeave: function (to, from, next) {
+    destroyed: function () {
         store.unregisterModule('userProfile')
-        next()
     },
     data: function () {
         return {

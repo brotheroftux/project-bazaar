@@ -124,9 +124,8 @@ export default {
 
         next()
     },
-    beforeRouteLeave: function (to, from, next) {
+    destroyed: function () {
         store.unregisterModule('projectPage')
-        next()
     },
     components: {
         TagCloud,
