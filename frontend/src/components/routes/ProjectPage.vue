@@ -147,6 +147,7 @@ export default {
 
     .info-titles {
         font-weight:bold;
+        margin-bottom:3px;
     }
 
     .project-photo {
