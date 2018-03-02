@@ -12,7 +12,22 @@ export default {
     @import '~@/global-styles/vars.sass';
     
     .authButton {
-        color:blue;
+        background-color:#015387;;
+        flex-grow:1;
+        min-width: 140px;
+        font-weight: 400;
+        font-size: 14px;
+        color:#fff;
+    }
+
+    .connect{
+        padding:5px;
+        margin-top: 10px;
+        font-size: 1rem;
+        color: white;
+        background-color: $blue;
+        border-radius: 1px;
+        width: 100%;
     }
 
     .about-tab {

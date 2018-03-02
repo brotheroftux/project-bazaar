@@ -3,8 +3,9 @@
         <div class="info">
             <div class="header">
                     <!-- photo here-->
-                <div class='user-photo-overlay'>
+                <div class='avatar-container'>
                     <img class='user-photo' :src="user.user_photo">
+                    <ui-button text='Связаться' className="connect"></ui-button>
                 </div>
                 <div class="text-info">
                     <div class="full-name">
@@ -30,7 +31,7 @@
                         </div>
                     </div>
                     <!-- need to add buttonClick Handler-->
-                    <ui-button text='Связаться' class="connect"></ui-button>
+
                 </div>
             </div>
            
@@ -77,6 +78,8 @@
 import store from '@/store'
 import userProfile from '@/store/modules/userProfile'
 import TagCloud from '@/components/core-ui/TagCloud.vue'
+ 
+
  
 import { mapState, mapActions } from 'vuex'
  
@@ -128,11 +131,14 @@ export default {
 
 <style lang="scss" scoped>
     @import '~@/global-styles/vars.sass';
+    
     .user-profile {
         display:flex;
+        flex-direction: column;
         margin:auto;
         margin-top:50px;
         width:80%;
+        background: #edeef0;
     }
 
     .about-user{
@@ -151,7 +157,7 @@ export default {
     .info {
         display:flex;
         flex-direction:column;
-        width: 70%;
+        width: 100%;
     }
 
     .skills {
@@ -159,10 +165,15 @@ export default {
     }
 
     .text-info {
+        height:330px;
+        flex-grow: 1;
         display:flex;
         margin: 20px 10px;
         flex-direction:column;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: left;
+        margin-left: 20px;
+        background: white;
     }
     
     .header {
@@ -186,7 +197,10 @@ export default {
 
     .userProjects {
         width:100%;
+    
         display:flex;
+        margin-top: 20px;
+        justify-content: flex-start;
         min-height: 100px;
     }
 
@@ -231,10 +245,16 @@ export default {
 
     }
 
-    .user-photo-overlay {
+    .avatar-container {
         display:flex;
-        justify-content:center;
-        align-items:center;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 300px;
+        width: 200px;
+        background: white;
+        box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+        padding: 15px;
     }
 
     .education, .work, .email {
