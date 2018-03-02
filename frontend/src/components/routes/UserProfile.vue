@@ -116,7 +116,7 @@ export default {
         next()
     },
     beforeRouteLeave: function (to, from, next) {
-        store.unregisterModule('userProfile')
+        setTimeout(() => store.unregisterModule('userProfile'), 0)
         next()
     },
     data: function () {

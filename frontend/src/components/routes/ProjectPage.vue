@@ -125,7 +125,7 @@ export default {
         next()
     },
     beforeRouteLeave: function (to, from, next) {
-        store.unregisterModule('projectPage')
+        setTimeout(() => store.unregisterModule('projectPage'), 0)
         next()
     },
     components: {
