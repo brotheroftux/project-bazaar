@@ -26,7 +26,7 @@ export default {
         font-size: 16px;
         color: #44484f;
         letter-spacing: 0;
-        padding: 7px 3px;
+        padding: 7px 7px;
         border-radius: 4px 4px 4px 4px;
         background: #f8f9fc;
         border: 1px solid #dee3eb;
