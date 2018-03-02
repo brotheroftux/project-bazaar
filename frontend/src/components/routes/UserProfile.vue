@@ -3,9 +3,8 @@
         <div class="info">
             <div class="header">
                     <!-- photo here-->
-                <div class='avatar-container'>
+                <div class='user-photo-overlay'>
                     <img class='user-photo' :src="user.user_photo">
-                    <ui-button text='Связаться' className="connect"></ui-button>
                 </div>
                 <div class="text-info">
                     <div class="full-name">
@@ -31,6 +30,7 @@
                         </div>
                     </div>
                     <!-- need to add buttonClick Handler-->
+                    <ui-button text='Связаться' className="connect"></ui-button>
 
                 </div>
             </div>
@@ -134,11 +134,9 @@ export default {
     
     .user-profile {
         display:flex;
-        flex-direction: column;
         margin:auto;
         margin-top:50px;
         width:80%;
-        background: #edeef0;
     }
 
     .about-user{
@@ -157,7 +155,7 @@ export default {
     .info {
         display:flex;
         flex-direction:column;
-        width: 100%;
+        width: 70%;
     }
 
     .skills {
@@ -165,15 +163,10 @@ export default {
     }
 
     .text-info {
-        height:330px;
-        flex-grow: 1;
         display:flex;
         margin: 20px 10px;
         flex-direction:column;
-        justify-content: space-around;
-        align-items: left;
-        margin-left: 20px;
-        background: white;
+        justify-content: space-between;
     }
     
     .header {
@@ -199,8 +192,6 @@ export default {
         width:100%;
     
         display:flex;
-        margin-top: 20px;
-        justify-content: flex-start;
         min-height: 100px;
     }
 
@@ -245,16 +236,10 @@ export default {
 
     }
 
-    .avatar-container {
+    .user-photo-container {
         display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 300px;
-        width: 200px;
-        background: white;
-        box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
-        padding: 15px;
+        justify-content:center; 
+        align-items:center;
     }
 
     .education, .work, .email {
