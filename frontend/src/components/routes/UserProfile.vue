@@ -254,7 +254,4 @@ export default {
         margin: 0 10px 0 0;
         color: red;
     }
-    .education--text, .work-text, .email.text{
-
-    }
 </style>

@@ -63,8 +63,7 @@
                 </div>
                 <!-- ЗАГЛУШКА, НУЖНО ЗАМЕНИТЬ НА РЕАЛЬНЫХ УЧАСТНИКОВ-->
                 <div class="team-members">
-                    <team-member v-for="member in project.roles" :key="member.id" :member="member">
-                    </team-member>
+                    <team-member v-for="member in roles" :key="member.id" :member="member" />
                     <div class="team-member">
                         <div class="team-member-photo" style="background-color:gray">
 
@@ -81,11 +80,11 @@
         <div class = 'clouds'>
             <div class = 'interests'>
                 <div>Интересы</div>
-                    <tag-cloud :tags = "interests"></tag-cloud> 
+                    <tag-cloud :tags="interests"></tag-cloud> 
                 </div>
             <div class = 'instruments'>
                 <div>Инcтрументы</div>
-                    <tag-cloud :tags = "skills"></tag-cloud> 
+                    <tag-cloud :tags="skills"></tag-cloud> 
                 </div>
         </div>
     </div>
@@ -98,19 +97,18 @@ import projectPage from '@/store/modules/projectPage'
 import UiButton from '@/components/core-ui/UIButton.vue'
 import TagCloud from '@/components/core-ui/TagCloud.vue'
 import TeamMember from '@/components/TeamMember.vue'
-import { mapState, mapActions, mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
     methods: mapActions('projectPage', [
         'getProjectData'
     ]),
     computed: {
-        ...mapState('projectPage', [
-            'project'
-        ]),
         ...mapGetters('projectPage', [
             'skills',
-            'interests'
+            'interests',
+            'project',
+            'roles'
         ])
     },
     // vue-router

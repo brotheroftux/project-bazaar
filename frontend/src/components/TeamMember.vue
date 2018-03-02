@@ -20,7 +20,7 @@ export default {
     computed: {
         cutedDescription: function () {
             return this.member.description.substr(0,400)
-        }
+        },
     }
 }
 </script>

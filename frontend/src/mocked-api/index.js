@@ -1,6 +1,7 @@
 import mockedProfile from '@/mocked-api/mocked-data/profile'
 import mockedProjects from '@/mocked-api/mocked-data/projects'
 import mockedRoles from '@/mocked-api/mocked-data/roles'
+import mockedProfileShort from '@/mocked-api/mocked-data/shortProfile'
 
 export function requestMagic () {
     return '/auth/__mock_magic__'
@@ -17,9 +18,12 @@ export function getUserProfile () {
     return mockedProfile
 }
 
+export function getUserProfileShort () {
+    return mockedProfileShort
+}
+
 export function getProjectData () {
     const mockedProject = mockedProjects[2]
-    mockedProject.roles = mockedRoles
 
-    return mockedProject
+    return { project: mockedProject, roles: mockedRoles }
 }

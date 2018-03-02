@@ -4,7 +4,7 @@ export default [
         'id_project': 3,
         'title': 'Студент-стажер',
         'status':{
-            'value':0,
+            'value': 1,
             'id_user':'2',
         },
         'description':`- Анализ достаточности команд STP;	- Анализ достаточности команд SiteXML Macrolanguage;
@@ -20,8 +20,7 @@ export default [
         'id_project': 3,
         'title': 'Куратор',
         'status':{
-            'value': 2,
-            'id_user':'',
+            'value': 0
         },
         'description': '',
         'awards': '5000 руб.',

@@ -16,5 +16,11 @@ export default {
         }, [])
 
         return Array.from(new Set(reduced))
+    },
+    project: function (state) {
+        return state.project.project
+    },
+    roles: function (state) {
+        return state.project.roles
     }
 }
