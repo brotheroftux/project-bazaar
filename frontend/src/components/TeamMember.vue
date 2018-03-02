@@ -56,8 +56,8 @@ export default {
         display:flex;
         justify-content:center;
         align-items:center;
-        margin:5px;
-        margin-left:0px;
+        margin:5px 20px 5px 0;
+
     }
 
     .photo-overlay, .photo-mock {
@@ -70,5 +70,6 @@ export default {
 
     .photo-mock {
         background-color:$blue;
+
     }
 </style>

@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="description">
-                <div class="description-header">
+                <div class="into-header">
                     ОПИСАНИЕ ПРОЕКТА
                 </div>
                 <div class="description-text">
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="team">
-                <div class="team-header">
+                <div class="into-header">
                     КОМАНДА
                 </div>
                 <!-- ЗАГЛУШКА, НУЖНО ЗАМЕНИТЬ НА РЕАЛЬНЫХ УЧАСТНИКОВ-->
@@ -79,11 +79,11 @@
         </div>
         <div class = 'clouds'>
             <div class = 'interests'>
-                <div>Интересы</div>
+                <div class = 'interests-title'>Интересы</div>
                     <tag-cloud :tags="interests"></tag-cloud> 
                 </div>
             <div class = 'instruments'>
-                <div>Инcтрументы</div>
+                <div class = 'interests-title'>Инcтрументы</div>
                     <tag-cloud :tags="skills"></tag-cloud> 
                 </div>
         </div>
@@ -151,7 +151,8 @@ export default {
     }
 
     .project-photo {
-        width:100%;
+        max-width:230px;
+        max-height: 230px;
         margin-right: 20px;
         border-radius: 5px;
     }
@@ -240,5 +241,23 @@ export default {
 
     .interests, .instruments {
         text-align:center;
+    }
+
+    .interests-title{
+        margin:12px;
+        font-size: 1.3em;
+        color: $blue;
+    }
+    .into-header {
+        margin:10px 10px 10px 0;
+    }
+    .project-type{
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding: 5px 0 5px 0;
+    }
+
+    .project-dates, .project-organisation, .project-results, .project-resources {
+        font-size: 0.85rem;
     }
 </style>
