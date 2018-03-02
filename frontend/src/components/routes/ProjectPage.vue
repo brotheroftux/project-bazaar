@@ -176,7 +176,8 @@ export default {
     .header {
         display:flex;
         min-height:200px;
-        margin-bottom:1rem;
+        padding-bottom:1.5rem;
+        border-bottom: 2px solid #dee3eb;
     }
 
     .userProjects {
