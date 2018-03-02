@@ -18,6 +18,9 @@ export default {
         font-weight: 400;
         font-size: 14px;
         color:#fff;
+        transition: all .2s linear;
+        text-decoration: none;
+        border-width:0px;
     }
 
     .connect{

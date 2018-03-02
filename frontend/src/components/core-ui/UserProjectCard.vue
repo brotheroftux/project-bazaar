@@ -39,7 +39,7 @@ export default {
     @import '~@/global-styles/vars.sass';
 
     .userProjectCard {
-      //  box-shadow: 1px 2px 7px 1px #;
+        width:250px;
         margin:20px;
         background-color: #fff;
         min-height:220px;
