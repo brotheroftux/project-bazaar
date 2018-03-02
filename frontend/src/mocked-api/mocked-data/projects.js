@@ -36,7 +36,7 @@ export default [
     {
         'id': 3,
         'type_project': 'Стажировка',
-        'project_photo': 'https://upload.wikimedia.org/wikipedia/commons/7/71/Weaved_truncated_square_tiling.png',
+        'project_photo': 'http://mtdata.ru/u18/photo352B/20331194705-0/original.jpg',
         'title': 'Unity разработчик',
         'id_creator': 2,
         'description_project':'Разработка на Unity с последующей публикацией для iOS и Android игрового приложения.',

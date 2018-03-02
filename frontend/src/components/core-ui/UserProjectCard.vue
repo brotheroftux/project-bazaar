@@ -1,12 +1,12 @@
 <template>
     <div class="userProjectCard">
-            <div class="cardSide" v-if='activeSide==0'>
+            <div @click="changeSide" class="cardSide" v-if='activeSide==0'>
                 <div class="title">{{userProjectCard.title}}</div>
                 <div class="role">{{userProjectCard.role.title}}</div>
                 <ui-button @buttonClick="changeSide" text="Подробнее" class="changeCardSide"></ui-button>
             </div>
 
-        <div class="cardSide" v-if='activeSide==1'>
+        <div @click="changeSide" class="cardSide" v-if='activeSide==1'>
             <div class="projectFullInfo">
                 <ui-button @buttonClick="changeSide" text="Кратко" class="changeCardSide"></ui-button>
             </div>
@@ -68,6 +68,7 @@ export default {
         flex-direction:column;
         justify-content:space-around;
         align-items:center;
+        cursor:pointer;
     }
 
 </style>

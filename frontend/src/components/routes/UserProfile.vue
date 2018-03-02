@@ -53,6 +53,10 @@
                         </ui-button>
                     </div>
                     <div class="about-user" v-if='activeTab==1'>{{user.about}}</div>
+                    <div class="about-user" v-if='activeTab==2'>{{user.work.experience}}</div>
+                    <div class="about-user" v-if='activeTab==3'>{{user.education.about}}</div>
+                    <div class="about-user" v-if='activeTab==4'>{{user.rewards}}</div>
+                    <div class="about-user" v-if='activeTab==5'>{{user.publications}}</div>
                 </div>
             <div class='inform-panel'>
                 <div class = "userProjects">
@@ -145,6 +149,7 @@ export default {
         color: #444;
         text-align: justify;
          margin: 10px 15px 15px 20px;
+         min-height:150px;
     }
 
     .user-photo {
