@@ -161,6 +161,7 @@ export default {
         display:flex;
         flex-direction:column;
         width: 70%;
+        margin: 30px;
     }
 
     .skills {
