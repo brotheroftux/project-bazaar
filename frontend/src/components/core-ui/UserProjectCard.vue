@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
     @import '~@/global-styles/vars.sass';
 
     .userProjectCard {
