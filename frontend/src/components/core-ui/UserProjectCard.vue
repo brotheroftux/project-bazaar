@@ -1,6 +1,6 @@
 <template>
     <div class="userProjectCard">
-        <div @click="changeSide" class="cardSide" v-if='activeSide==0'>
+        <div class="cardSide" v-if='activeSide==0'>
             <div class="title">
                 <router-link :to="'/project/' + userProjectCard.id_project">
                     {{userProjectCard.project.title}}
@@ -10,7 +10,7 @@
             <ui-button @buttonClick="changeSide" text="Подробнее" class="changeCardSide"></ui-button>
         </div>
 
-        <div @click="changeSide" class="cardSide" v-if='activeSide==1'>
+        <div class="cardSide" v-if='activeSide==1'>
             <div v-if="userProjectCard.description" class="description">{{ userProjectCard.description }}</div>
             <div v-if="userProjectCard.awards" class="awards">{{ userProjectCard.awards }}</div>
             <div class="project-details">
