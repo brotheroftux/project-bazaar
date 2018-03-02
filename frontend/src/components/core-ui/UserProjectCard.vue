@@ -1,6 +1,6 @@
 <template>
     <div class="userProjectCard">
-        <div class="cardSide" v-if='activeSide==0'>
+        <div @click="changeSide" class="cardSide" v-if='activeSide==0'>
             <div class="title">
                 <router-link :to="'/project/' + userProjectCard.id_project">
                     {{userProjectCard.project.title}}
@@ -10,17 +10,15 @@
             <ui-button @buttonClick="changeSide" text="Подробнее" class="changeCardSide"></ui-button>
         </div>
 
-        <div class="cardSide" v-if='activeSide==1'>
-            <div class="projectFullInfo">
-                <div class="description">{{ userProjectCard.description }}</div>
-                <div class="awards">{{ userProjectCard.awards }}</div>
-                <div class="project-details">
-                    <div class="type">
-                        Тип проекта: {{ userProjectCard.project.type_project }}
-                    </div>
+        <div @click="changeSide" class="cardSide" v-if='activeSide==1'>
+            <div v-if="userProjectCard.description" class="description">{{ userProjectCard.description }}</div>
+            <div v-if="userProjectCard.awards" class="awards">{{ userProjectCard.awards }}</div>
+            <div class="project-details">
+                <div class="type">
+                    Тип проекта: {{ userProjectCard.project.type_project }}
                 </div>
-                <ui-button @buttonClick="changeSide" text="Кратко" class="changeCardSide"></ui-button>
             </div>
+            <ui-button @buttonClick="changeSide" text="Кратко" class="changeCardSide"></ui-button>
         </div>
     </div>
 </template>
@@ -80,6 +78,11 @@ export default {
         justify-content:space-around;
         align-items:center;
         cursor:pointer;
+    }
+
+    .description, .awards, .projectDetails, .type {
+        text-align:center;
+        margin:20px;
     }
 
 </style>
