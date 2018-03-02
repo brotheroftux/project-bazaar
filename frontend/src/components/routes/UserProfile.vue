@@ -17,7 +17,7 @@
                             {{user.education.qualification}}, {{user.education.degree}}, {{user.education.university}}
                         </div>
                     </div>
-                    <div v-if="user.work" class="work">
+                    <div class="work">
                         <img class="work--icon" src = "http://pm-pu.ru/pb/svg/business.svg">
                         <div class="work--text">
                             {{user.work.position}}, {{user.work.company}}

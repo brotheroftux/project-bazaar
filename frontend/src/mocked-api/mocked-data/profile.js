@@ -5,7 +5,7 @@ export default {
     'last_name': 'Вахрушев',
     'patronymic': 'альясович',
     'email': 'daily@gmail.com',
-    'user_photo': 'https://hochu.ua/thumbnails/articles/cropr_640x490/77302_0.jpg',
+    'user_photo': 'https://psv4.userapi.com/c834502/u150562030/docs/d16/f3a8b97c5887/andreevata.jpg?extra=3eVVOXRtxR7rzbc9JwPRT9L4aGRPsDPpmWhR4a7iXYypnpVtslJdT0wx4_Lfzcf98JQB2GRwd7vOxAcoCkWrsWYwYR6c70JnqAzxaeqUmOZcO7-sQ69a494YUOslC2ZEEqgD2caAiw',
     'education': {
         'university': 'СПбГУ',
         'qualification': 'математик',

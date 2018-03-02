@@ -36,7 +36,7 @@ export default [
     {
         'id': 3,
         'type_project': 'Стажировка',
-        'project_photo': 'http://mtdata.ru/u18/photo352B/20331194705-0/original.jpg',
+        'project_photo': 'https://pp.userapi.com/c830609/v830609387/94685/Zvg2lElADew.jpg',
         'title': 'Unity разработчик',
         'id_creator': 2,
         'description_project':'Разработка на Unity с последующей публикацией для iOS и Android игрового приложения.',
