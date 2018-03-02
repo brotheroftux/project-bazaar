@@ -1,14 +1,5 @@
 <template>
     <div>
-        <router-link to="/">
-            Home
-        </router-link>
-        <router-link to="/user/1">
-            User Page
-        </router-link>
-        <router-link to="/project/2">
-            Another project
-        </router-link>
         <router-view />
     </div>
 </template>

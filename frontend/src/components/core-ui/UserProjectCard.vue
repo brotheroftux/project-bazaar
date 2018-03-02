@@ -1,13 +1,24 @@
 <template>
     <div class="userProjectCard">
-        <div @click="changeSide"  class="cardSide" v-if='activeSide==0'>
-            <div class="title">{{userProjectCard.project.title}}</div>
+        <div class="cardSide" v-if='activeSide==0'>
+            <div class="title">
+                <router-link :to="'/project/' + userProjectCard.id_project">
+                    {{userProjectCard.project.title}}
+                </router-link>
+            </div>
             <div class="role">{{userProjectCard.title}}</div>
             <ui-button @buttonClick="changeSide" text="Подробнее" class="changeCardSide"></ui-button>
         </div>
 
-        <div @click="changeSide" class="cardSide" v-if='activeSide==1'>
+        <div class="cardSide" v-if='activeSide==1'>
             <div class="projectFullInfo">
+                <div class="description">{{ userProjectCard.description }}</div>
+                <div class="awards">{{ userProjectCard.awards }}</div>
+                <div class="project-details">
+                    <div class="type">
+                        Тип проекта: {{ userProjectCard.project.type_project }}
+                    </div>
+                </div>
                 <ui-button @buttonClick="changeSide" text="Кратко" class="changeCardSide"></ui-button>
             </div>
         </div>
