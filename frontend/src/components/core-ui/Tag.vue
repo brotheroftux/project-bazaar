@@ -22,7 +22,6 @@ export default {
         margin: 5px;
         flex-grow: 1;
         text-align: center; 
-
         font-weight: 400;
         font-size: 16px;
         color: #44484f;
