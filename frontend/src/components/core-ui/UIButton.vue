@@ -16,20 +16,20 @@ export default {
     }
 
     .about-tab {
-        background-color: white;
+        background-color: #fff;
         outline: none;
         border-style: none;
-        font-size: 1rem;
-        margin: 5px;
-        color:grey;
+        font-size: 1.2rem;
+        margin: 7px;
+        color: #888;
     }
     .about-tab-active {
-        background-color: white;
+        background-color: #fff;
         outline: none;
         border-style: none;
-        font-size: 1rem;
-        margin: 5px;
-        color: black;
+        font-size: 1.2rem;
+        margin: 7px;
+        color:#444;
         text-decoration: underline;
     }
 

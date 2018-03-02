@@ -15,16 +15,15 @@ export default {
     @import '~@/global-styles/vars.sass';
 
     .tag {
-        background-color: rgb(248, 248, 248);
+    //    background-color:#fafafa;
         border-radius: 3px;
         border-style: solid;
         border-width: 1px;
-        border-color: gray;
-        box-shadow: 1px 2px 2px 1px rgb(202, 202, 202);
+        border-color: #888;
+       // box-shadow: 1px 2px 2px 1px rgb(202, 202, 202);
+        color:#444;
         padding: 6px;
-        padding-left: 5px;
-        padding-right: 5px;
-        font-size: 0.8rem;
+        font-size: 0.9em;
         display: inline-block;
         margin: 5px;
         flex-grow: 1;

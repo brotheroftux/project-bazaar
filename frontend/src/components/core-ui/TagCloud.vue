@@ -24,8 +24,12 @@ export default {
         display: flex;
         padding : 5px;
         width: 100%;
-        border-width: 1px;
+        border-radius: 2px;
         flex-wrap: wrap;
+        background-color: #fff;
+    //    border: 1px solid #aaa;
+        border-radius: 3px; 
+    //    box-shadow: 1px 2px 0 0 #ddd;
     }
 
      .clouds {
